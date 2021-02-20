@@ -2,7 +2,7 @@ import cats.effect.IO
 import cats.effect.unsafe.implicits.global
 
 @main def hello: Unit =
-  val printer: IO[Unit] =
+  val printer =
     IO { println("Hello world!") } *>
     IO { println(msg) }
   printer.unsafeRunSync()
